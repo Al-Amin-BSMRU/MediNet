@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - Hospital System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      background: #f0f4f8;
+    }
+
+ 
+    .sidebar {
+      width: 220px;
+      background-color: #1e3a5f;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 22px;
+      color: #00b4d8;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #e0f7fa;
+      padding: 12px 15px;
+      margin-bottom: 12px;
+      display: block;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .sidebar a:hover {
+      background-color: #0077b6;
+      color: white;
+    }
+
+   
+    .main {
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+    }
+
+    .dashboard-title {
+      font-size: 26px;
+      font-weight: 600;
+      color: #023047;
+      margin-bottom: 30px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      font-size: 18px;
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 28px;
+      font-weight: bold;
+      color: #023047;
+    }
+
+  
+    @media (max-width: 768px) {
+      .sidebar {
+        position: fixed;
+        width: 200px;
+        height: 100%;
+        left: -200px;
+        top: 0;
+        transition: left 0.3s ease;
+        z-index: 999;
+      }
+
+      .sidebar.show {
+        left: 0;
+      }
+
+      .toggle-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: #0077b6;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        z-index: 1000;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <div class="sidebar" id="sidebar">
+    <h2>Admin Menu</h2>
+    <a href="adminDoctor.html">Total Doctors</a>
+    <a href="adminNurses.html">Total Nurses</a>
+    <a href="adminStuff.html">Total Staff</a>
+    <a href="adminPatient.html">Total Patients</a>
+    <a href="ongoingAppoinments.html">Ongoing Appointments</a>
+    <!-- <a href="adminEmergency.html">Emergency Requests</a> -->
+    <a href="adminRevenue.html">Revenue</a>
+    <a href="index.html">Log Out</a>
+  </div>
+
+  
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+  
+  <div class="main">
+    <div class="dashboard-title">Welcome, Admin</div>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>Total Doctors</h3>
+        <p>25</p>
+      </div>
+      <div class="card">
+        <h3>Total Nurses</h3>
+        <p>40</p>
+      </div>
+      <div class="card">
+        <h3>Total Staff</h3>
+        <p>35</p>
+      </div>
+      <div class="card">
+        <h3>Total Patients</h3>
+        <p>120</p>
+      </div>
+      <div class="card">
+        <h3>Ongoing Appointments</h3>
+        <p>18</p>
+      </div>
+     
+      <div class="card">
+        <h3>Revenue</h3>
+        <p>৳75,000</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>

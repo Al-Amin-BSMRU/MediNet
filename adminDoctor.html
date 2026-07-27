@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Total Doctors - Admin Panel</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #edf6f9;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #023047;
+      margin-bottom: 30px;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      padding: 25px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 1100px;
+    }
+
+    th, td {
+      padding: 14px 20px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #0077b6;
+      color: white;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    tr:hover {
+      background-color: #caf0f8;
+      transition: 0.2s ease-in-out;
+    }
+
+    td {
+      color: #333;
+      font-size: 14px;
+    }
+
+    .action-btn {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .edit-btn {
+      background-color: #00b4d8;
+    }
+
+    .edit-btn:hover {
+      background-color: #0077b6;
+    }
+
+    .delete-btn {
+      background-color: #d90429;
+      margin-left: 6px;
+    }
+
+    .delete-btn:hover {
+      background-color: #9d0208;
+    }
+
+    @media (max-width: 768px) {
+      table {
+        font-size: 13px;
+        min-width: unset;
+      }
+      th, td {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>👨‍⚕️ Total Doctors</h1>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Serial No</th>
+          <th>Name</th>
+          <th>Degree</th>
+          <th>Work Place</th>
+          <th>Specialist In</th>
+          <th>Gmail</th>
+          <th>Shift</th>
+          <th>Duty Days</th>
+          <th>Fee</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Dr. Arif Hossain</td>
+          <td>MBBS, FCPS</td>
+          <td>Dhaka Medical</td>
+          <td>Cardiology</td>
+          <td>arifdoc@gmail.com</td>
+          <td>Morning</td>
+          <td>Sun - Thu</td>
+          <td>৳1000</td>
+          <td>
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn delete-btn">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Dr. Farzana Rahman</td>
+          <td>MBBS, DGO</td>
+          <td>Square Hospital</td>
+          <td>Gynecology</td>
+          <td>farzana.gyn@gmail.com</td>
+          <td>Evening</td>
+          <td>Sat - Wed</td>
+          <td>৳1200</td>
+          <td>
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn delete-btn">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Dr. Mahmud Hasan</td>
+          <td>MBBS, MD</td>
+          <td>Popular Hospital</td>
+          <td>Medicine</td>
+          <td>mahmud.md@gmail.com</td>
+          <td>Night</td>
+          <td>Sun - Thu</td>
+          <td>৳800</td>
+          <td>
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn delete-btn">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

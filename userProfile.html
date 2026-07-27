@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Profile - Clean & Unique</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #005f73;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 20px;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+
+    .sidebar h2 {
+      margin-bottom: 30px;
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: 1px;
+      text-align: center;
+      border-bottom: 1px solid #0a9396;
+      padding-bottom: 10px;
+    }
+
+    .nav-button {
+      display: block;
+      text-decoration: none;
+      background: transparent;
+      padding: 12px 15px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      color: #e0fbfc;
+      position: relative;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-button:hover {
+      background: #0a9396;
+      color: #ffffff;
+    }
+
+    .nav-button::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: transparent;
+      border-radius: 8px 0 0 8px;
+      transition: background 0.3s ease;
+    }
+
+    .nav-button:hover::before {
+      background: #94d2bd;
+    }
+
+    /* Main content */
+    .main-content {
+      flex-grow: 1;
+      padding: 50px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      margin: 20px;
+    }
+
+    .quote {
+      font-size: 24px;
+      font-style: italic;
+      max-width: 600px;
+      text-align: center;
+      color: #001219;
+      line-height: 1.4;
+      opacity: 0;
+      animation: fadeInText 1s forwards 0.3s;
+    }
+
+    @keyframes fadeInText {
+      to { opacity: 1; }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        padding: 15px 10px;
+        overflow-x: auto;
+        box-shadow: none;
+      }
+      .nav-button {
+        flex: 1 0 auto;
+        margin: 0 8px;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .nav-button::before {
+        display: none;
+      }
+      .main-content {
+        margin: 15px;
+        padding: 30px 20px;
+      }
+      .quote {
+        font-size: 20px;
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h2>User Menu</h2>
+    <a class="nav-button" href="doctorDetails.html">Total Doctors</a>
+    <a class="nav-button" href="nurses.html">Total Nurse</a>
+    <a class="nav-button" href="stuff.html">Total Stuff</a>
+    <!-- <a class="nav-button" href="stuff.html">Total Patients</a> -->
+    <a class="nav-button" href="emergencyContact.html">Emergency Contact</a>
+    <a class="nav-button" href="TestDetails.html">Test Details</a>
+    <a class="nav-button" href="editProfile.html">Edit Profile</a>
+    <a class="nav-button" href="index.html">Log Out</a>
+  </aside>
+
+  <main class="main-content">
+    <p class="quote">“Healing is a matter of time, but it is sometimes also a matter of opportunity.” <br>— Hippocrates</p>
+  </main>
+
+</body>
+</html>

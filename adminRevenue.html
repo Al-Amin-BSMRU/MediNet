@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Revenue - Hospital Admin</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fbfc;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1d3557;
+      margin-bottom: 30px;
+    }
+
+    .table-container {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 1000px;
+    }
+
+    th, td {
+      padding: 14px 18px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #264653;
+      color: white;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    td {
+      font-size: 14px;
+      color: #333;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+      transition: background 0.2s ease;
+    }
+
+    .paid {
+      background-color: #b7e4c7;
+      color: #1b4332;
+      font-weight: bold;
+      border-radius: 20px;
+      padding: 6px 10px;
+    }
+
+    .pending {
+      background-color: #ffec99;
+      color: #7f4f24;
+      font-weight: bold;
+      border-radius: 20px;
+      padding: 6px 10px;
+    }
+
+    .action-btn {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 13px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .edit-btn {
+      background-color: #0077b6;
+    }
+
+    .edit-btn:hover {
+      background-color: #023e8a;
+    }
+
+    .delete-btn {
+      background-color: #d90429;
+      margin-left: 5px;
+    }
+
+    .delete-btn:hover {
+      background-color: #9d0208;
+    }
+
+    @media (max-width: 768px) {
+      table {
+        font-size: 13px;
+        min-width: unset;
+      }
+
+      th, td {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💰 Revenue Report</h1>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Serial No</th>
+          <th>Date</th>
+          <th>Source</th>
+          <th>Description</th>
+          <th>Amount (৳)</th>
+          <th>Payment Method</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>2025-07-12</td>
+          <td>Doctor Fee</td>
+          <td>Consultation with Dr. Arif</td>
+          <td>500</td>
+          <td>Cash</td>
+          <td><span class="paid">Paid</span></td>
+          <td>
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn delete-btn">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>2025-07-12</td>
+          <td>Test</td>
+          <td>Blood Test - CBC</td>
+          <td>350</td>
+          <td>bKash</td>
+          <td><span class="pending">Pending</span></td>
+          <td>
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn delete-btn">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>2025-07-11</td>
+          <td>Pharmacy</td>
+          <td>Medicine Sale</td>
+          <td>1200</td>
+          <td>Card</td>
+          <td><span class="paid">Paid</span></td>
+          <td>
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn delete-btn">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nurses - Smart Hospital</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f3f9ff;
+      min-height: 100vh;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #004d73;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 40px;
+    }
+
+    .nurse-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .nurse-card {
+      background: #ffffff;
+      border-radius: 16px;
+      width: 320px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 25px 20px;
+      border-top: 5px solid #0077b6;
+      position: relative;
+    }
+
+    .nurse-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 119, 182, 0.25);
+    }
+
+    .nurse-image {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #0077b6;
+      margin-bottom: 15px;
+      background-color: #e0f7fa;
+    }
+
+    .nurse-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: #004d73;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .info-box {
+      width: 100%;
+      background: #f0f8ff;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-top: 10px;
+    }
+
+    .nurse-info {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .nurse-info span {
+      color: #0077b6;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 28px;
+      }
+      .nurse-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Dedicated Nurses</h1>
+
+  <div class="nurse-container">
+    <!-- Nurse Card 1 -->
+    <div class="nurse-card">
+      <img src="https://i.postimg.cc/sDCbHJMr/nurse-cartoon-female.png" alt="Nurse Maria" class="nurse-image" />
+      <h2 class="nurse-name">Nurse Maria</h2>
+      <div class="info-box">
+        <p class="nurse-info"><span>Institution:</span> Nursing College Dhaka</p>
+        <p class="nurse-info"><span>Shift:</span> Morning</p>
+        <p class="nurse-info"><span>Duty Days:</span> Sun - Thu</p>
+        <p class="nurse-info"><span>Workplace:</span> Smart Hospital, Unit 3A</p>
+        <p class="nurse-info"><span>Doctor:</span> Dr. noakhailla</p>
+      </div>
+    </div>
+
+    <!-- Nurse Card 2 -->
+    <div class="nurse-card">
+      <img src="https://i.postimg.cc/P5dGStzf/nurse-cartoon-male.png" alt="Nurse Rahim" class="nurse-image" />
+      <h2 class="nurse-name">Nurse Rahim Uddin</h2>
+      <div class="info-box">
+        <p class="nurse-info"><span>Institution:</span> Sylhet Nursing Institute</p>
+        <p class="nurse-info"><span>Shift:</span> Evening</p>
+        <p class="nurse-info"><span>Duty Days:</span> Mon - Fri</p>
+        <p class="nurse-info"><span>Workplace:</span> ICU, Block-B</p>
+        <p class="nurse-info"><span>Doctor:</span> Dr. cumillabatper</p>
+      </div>
+    </div>
+
+
+     <div class="nurse-card">
+      <img src="https://i.postimg.cc/P5dGStzf/nurse-cartoon-male.png" alt="Nurse Rahim" class="nurse-image" />
+      <h2 class="nurse-name">Nurse Al Amin</h2>
+      <div class="info-box">
+        <p class="nurse-info"><span>Institution:</span> Sylhet Nursing Institute</p>
+        <p class="nurse-info"><span>Shift:</span> Evening</p>
+        <p class="nurse-info"><span>Duty Days:</span> Mon - Fri</p>
+        <p class="nurse-info"><span>Workplace:</span> ICU, Block-B</p>
+        <p class="nurse-info"><span>Doctor:</span> Dr. cumillabatper</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>© 2025 Smart Hospital | All Rights Reserved</footer>
+</body>
+</html>

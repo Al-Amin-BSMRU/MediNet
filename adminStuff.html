@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Total Staff - Admin Panel</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5faff;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #14213d;
+      margin-bottom: 30px;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      padding: 25px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 1100px;
+    }
+
+    th, td {
+      padding: 14px 20px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #023047;
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    tr:hover {
+      background-color: #e0f2f1;
+      transition: background 0.2s ease-in-out;
+    }
+
+    td {
+      color: #333;
+      font-size: 14px;
+    }
+
+    .action-btn {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .edit-btn {
+      background-color: #00b4d8;
+    }
+
+    .edit-btn:hover {
+      background-color: #0077b6;
+    }
+
+    .delete-btn {
+      background-color: #d90429;
+      margin-left: 6px;
+    }
+
+    .delete-btn:hover {
+      background-color: #9d0208;
+    }
+
+    @media (max-width: 768px) {
+      table {
+        font-size: 13px;
+        min-width: unset;
+      }
+
+      th, td {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>👨‍🔧 Total Staff</h1>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Serial No</th>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Institution</th>
+          <th>Work Place</th>
+          <th>Gmail</th>
+          <th>Shift</th>
+          <th>Duty Days</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Hasan Mahmud</td>
+          <td>Receptionist</td>
+          <td>Dhaka Staff College</td>
+          <td>Dhaka Medical</td>
+          <td>hasan.recep@gmail.com</td>
+          <td>Morning</td>
+          <td>Sun - Thu</td>
+          <td>
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn delete-btn">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Sumaiya Afroz</td>
+          <td>Accountant</td>
+          <td>Finance Institute BD</td>
+          <td>Square Hospital</td>
+          <td>sumaiya.acc@gmail.com</td>
+          <td>Evening</td>
+          <td>Sat - Wed</td>
+          <td>
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn delete-btn">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Raihan Kabir</td>
+          <td>Ward Boy</td>
+          <td>City Technical School</td>
+          <td>Popular Hospital</td>
+          <td>raihan.ward@gmail.com</td>
+          <td>Night</td>
+          <td>Mon - Fri</td>
+          <td>
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn delete-btn">Delete</button>
+          </td>
+        </tr>
+        <!-- More staff can be added here -->
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

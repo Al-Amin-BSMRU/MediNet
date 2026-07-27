@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Total Patients - Hospital Admin</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f6fbff;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0a1128;
+      margin-bottom: 30px;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+      padding: 25px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 950px;
+    }
+
+    th, td {
+      padding: 14px 20px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #1d3557;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    tr:hover {
+      background-color: #e3f2fd;
+      transition: background 0.2s ease-in-out;
+    }
+
+    td {
+      color: #333;
+      font-size: 14px;
+    }
+
+    .action-btn {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin: 0 3px;
+    }
+
+    .edit-btn {
+      background-color: #0077b6;
+    }
+
+    .edit-btn:hover {
+      background-color: #023e8a;
+    }
+
+    .delete-btn {
+      background-color: #d90429;
+    }
+
+    .delete-btn:hover {
+      background-color: #9d0208;
+    }
+
+    @media (max-width: 768px) {
+      table {
+        font-size: 13px;
+        min-width: unset;
+      }
+
+      th, td {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧑‍⚕️ Total Patients</h1>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Serial No</th>
+          <th>Name</th>
+          <th>Reason</th>
+          <th>Doctor</th>
+          <th>Test</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Tanvir Hasan</td>
+          <td>Chest Pain</td>
+          <td>Dr. Arif Hossain</td>
+          <td>ECG, Blood Test</td>
+          <td>2025-07-12</td>
+          <td>
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn delete-btn">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Rokeya Sultana</td>
+          <td>Pregnancy Checkup</td>
+          <td>Dr. Farzana Rahman</td>
+          <td>Ultrasound</td>
+          <td>2025-07-10</td>
+          <td>
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn delete-btn">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Mahfuz Rahman</td>
+          <td>Fever & Weakness</td>
+          <td>Dr. Mahmud Hasan</td>
+          <td>Blood Test, CBC</td>
+          <td>2025-07-09</td>
+          <td>
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn delete-btn">Delete</button>
+          </td>
+        </tr>
+        <!-- More patients can be added -->
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

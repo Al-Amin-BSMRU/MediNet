@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hospital Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Common style for both <a> and <button> */
+    .nav-btn {
+      background: whitesmoke;
+      border: 2px solid rgba(0, 0, 0, 0.986);
+      
+      color: rgba(0, 0, 0, 0.986);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: 0.3s ease-in-out;
+      text-decoration: none;
+      display: inline-block;
+      
+      
+    }
+
+    .nav-btn::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 0%;
+      height: 0%;
+      background-color: #8a3324;
+      border-radius: 50%;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      transition: all 0.4s ease;
+    }
+
+    .nav-btn:hover::before {
+      width: 300%;
+      height: 300%;
+    }
+
+    .nav-btn:hover {
+      color: rgb(248, 2, 2);
+      border-color: transparent;
+    }
+
+    
+    .form-container {
+      width: 300px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      padding: 20px;
+      display: none;
+      animation: fadeIn 0.4s ease-in-out;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #0077b6;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#" class="nav-btn">Home</a>
+    <a href="aboutUs.html" class="nav-btn">About Us</a>
+    <a href="service.html" class="nav-btn">Services</a>
+    <button onclick="toggleForm('login')" class="nav-btn">Login</button>
+    <button onclick="toggleForm('register')" class="nav-btn">Registration</button>
+  </div>
+
+  <!-- Login Form -->
+  <div class="form-container" id="login-form">
+    <h2>Login</h2>
+    <form>
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
+  <!-- Registration Form -->
+  <div class="form-container" id="register-form">
+    <h2>Registration</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <input type="submit" value="Register">
+    </form>
+  </div>
+
+  
+  <script>
+    function toggleForm(formType) {
+      const loginForm = document.getElementById("login-form");
+      const registerForm = document.getElementById("register-form");
+
+      if (formType === "login") {
+        if (loginForm.style.display === "block") {
+          loginForm.style.display = "none";
+        } else {
+          loginForm.style.display = "block";
+          registerForm.style.display = "none";
+        }
+      }
+
+      if (formType === "register") {
+        if (registerForm.style.display === "block") {
+          registerForm.style.display = "none";
+        } else {
+          registerForm.style.display = "block";
+          loginForm.style.display = "none";
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

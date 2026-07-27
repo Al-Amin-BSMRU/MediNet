@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Emergency Contact - Smart Hospital</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #d5fadb50, #96e6a1);
+      min-height: 100vh;
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .contact-card {
+      background: white;
+      width: 300px;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .icon {
+      font-size: 30px;
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+
+    .role {
+      font-size: 16px;
+      color: #0077b6;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .number {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .info {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    /* Header */
+    .page-title {
+      width: 100%;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: #0077b6;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px #b2dfdb;
+    }
+
+    @media (max-width: 600px) {
+      .contact-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-title">🚨 Emergency Contact</div>
+
+  <div class="contact-card">
+    <div class="icon">🚑</div>
+    <div class="role">Ambulance Service</div>
+    <div class="name">RapidCare Ambulance</div>
+    <div class="number">📞 01712-345678</div>
+    <div class="info">Available 24/7 for emergency pickup from any location within the city.</div>
+  </div>
+
+  <div class="contact-card">
+    <div class="icon">🏥</div>
+    <div class="role">Emergency Reception</div>
+    <div class="name">Sakib Rahman</div>
+    <div class="number">📞 01987-654321</div>
+    <div class="info">Main hospital gate emergency response desk. Quick help for all patients.</div>
+  </div>
+
+  <div class="contact-card">
+    <div class="icon">👩‍⚕️</div>
+    <div class="role">On-Duty Doctor</div>
+    <div class="name">Dr. Nilufa Jahan</div>
+    <div class="number">📞 01890-223344</div>
+    <div class="info">Senior duty doctor available for trauma and urgent care cases.</div>
+  </div>
+
+  <div class="contact-card">
+    <div class="icon">🛡️</div>
+    <div class="role">Security Office</div>
+    <div class="name">Security Lead - Anis</div>
+    <div class="number">📞 01678-445566</div>
+    <div class="info">Security support for patients, family, and visitors. Gate control and CCTV monitoring.</div>
+  </div>
+
+  <div class="contact-card">
+    <div class="icon">💉</div>
+    <div class="role">Emergency Blood Bank</div>
+    <div class="name">LifeSave Unit</div>
+    <div class="number">📞 01700-889900</div>
+    <div class="info">24-hour blood supply for emergency operations and trauma support.</div>
+  </div>
+
+</body>
+</html>

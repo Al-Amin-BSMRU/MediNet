@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - Smart Hospital</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      line-height: 1.7;
+    }
+
+    .section {
+      margin-bottom: 40px;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-in-out;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h2 {
+      color: #0077b6;
+      margin-bottom: 15px;
+    }
+
+    .address-box {
+      background: #f1f9ff;
+      padding: 15px;
+      border-left: 4px solid #0077b6;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>About Smart Hospital</h1>
+    <p>Trusted Care. Advanced Technology. Compassionate Staff.</p>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h2>Our Mission</h2>
+      <p>
+        At <strong>Smart Hospital</strong>, our mission is to deliver world-class healthcare services 
+        through innovative technology and a patient-first approach. We strive to combine compassion with medical excellence 
+        to ensure every patient receives the best possible care.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Who We Are</h2>
+      <p>
+        Established in 2010, Smart Hospital has been a leader in digital healthcare transformation.
+        Our expert team of over 200 doctors, nurses, and medical professionals work tirelessly to bring 
+        high-quality, affordable healthcare to every corner of the country.
+        <br><br>
+         300+ Bed Facility  
+         24/7 Diagnostic Lab  
+         AI-powered Patient Monitoring  
+         Emergency Response within 10 minutes  
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Our Location</h2>
+      <div class="address-box">
+        <strong>Smart Hospital & Research Center</strong><br>
+        123/4, Health City Avenue,<br>
+        Dhanmondi, Dhaka-1205, Bangladesh<br>
+         Phone: +880 1234-567890<br>
+         Email: contact@smarthospital.bd
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>✅ Cutting-edge technology with human care</li>
+        <li>✅ Affordable treatment plans for all</li>
+        <li>✅ Trusted by 50,000+ patients nationwide</li>
+        <li>✅ Fast online appointment and report system</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Smart Hospital. All Rights Reserved.
+  </footer>
+
+  
+  <script>
+    const sections = document.querySelectorAll('.section');
+    window.addEventListener('scroll', () => {
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          section.classList.add('visible');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
